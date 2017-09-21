@@ -7,6 +7,7 @@ require.config({
         jquery : 'jquery/jquery',
         cookie : 'jquery-cookie/jquery.cookie',
         bootstrap : 'bootstrap/js/bootstrap',
+        template : 'artTemplate/template-web',
 
         common : '../js/common',
         login : '../js/login'
