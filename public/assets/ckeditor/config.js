@@ -30,7 +30,7 @@ CKEDITOR.editorConfig = function( config ) {
     // not needed in the Standard(s) toolbar.
     config.removeButtons = 'Underline,Subscript,Superscript';
 
-    // Set the most common block elements.
+    // Set the most common.js block elements.
     config.format_tags = 'p;h1;h2;h3;pre';
 
     // Simplify the dialog windows.

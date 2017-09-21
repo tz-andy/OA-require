@@ -1,7 +1,7 @@
-
-	NProgress.start();
-
-	NProgress.done();
+define(['jquery','cookie'],function($){
+	//NProgress.start();
+    //
+	//NProgress.done();
 
 	$('.navs ul').prev('a').on('click', function () {
 		$(this).next().slideToggle();
@@ -30,3 +30,4 @@
 	loginInfo = loginInfo && JSON.parse(loginInfo);
 	$('.aside .profile img').attr('src',loginInfo.tc_avatar);
 	$('.aside .profile h4').html(loginInfo.tc_name);
+});
