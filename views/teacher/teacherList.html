@@ -22,7 +22,7 @@
                     <li class="active">讲师列表</li>
                 </ol>
                 <div class="page-title">
-                    <a href="./teacher_add.html" class="btn btn-success btn-sm pull-right">添加讲师</a>
+                    <a href="/teacher/teacherAdd" class="btn btn-success btn-sm pull-right">添加讲师</a>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -89,7 +89,7 @@
             <td>{{item.tc_join_date}}</td>
             <td data-tcId="{{item.tc_id}}" data-tcStatus="{{item.tc_status}}">
                 <a href="#teacherModal" data-toggle="modal" class="btn btn-info btn-xs viewInfo">查 看</a>
-                <a href="#" class="btn btn-info btn-xs">编 辑</a>
+                <a href="/teacher/teacherAdd?tcId={{item.tc_id}}" class="btn btn-info btn-xs">编 辑</a>
                 <a href="javascript:;" class="btn btn-warning btn-xs startEnd">
                 {{if item.tc_status==0}}
                 启用
