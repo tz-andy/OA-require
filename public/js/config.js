@@ -11,5 +11,10 @@ require.config({
         common : '../js/common',
         login : '../js/login',
         teacherList : '../js/teacherList'
+    },
+    shim : {
+        bootstrap : {
+            deps : ['jquery']
+        }
     }
 });

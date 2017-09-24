@@ -1,5 +1,5 @@
 <?php
-header('content-type:text/html; charset=utf8;');
+//header('content-type:text/html; charset=utf8;');
 $dir = 'main';
 $filename = 'index';
 if(array_key_exists('PATH_INFO',$_SERVER)){

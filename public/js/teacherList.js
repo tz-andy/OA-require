@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/9/21.
  */
-define(['jquery','template'],function($,template){
+define(['jquery','template','bootstrap'],function($,template){
     //加载讲师列表
     $.ajax({
         type : 'get',
@@ -35,6 +35,24 @@ define(['jquery','template'],function($,template){
                         }
                     }
                 }) ;
+            });
+            //查看讲师信息
+            $('.viewInfo').on('click',function(){
+                var tcId = $(this).parent().attr('data-tcId');
+                $.ajax({
+                   type : 'get',
+                    url : '/api/teacher/view',
+                    data : {
+                        tc_id : tcId
+                    },
+                    dataType : 'json',
+                    success : function(data){
+                        // console.log(data);
+                        var seeInfoHtml = template('seeInfoTpl',data.result);
+                        $('.seeInfo').html(seeInfoHtml);
+                        $('#teacherModal').modal();
+                    }
+                });
             });
         }
     });
