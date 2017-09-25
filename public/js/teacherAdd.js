@@ -1,4 +1,4 @@
-define(['jquery','template','util'],function ($,template,util) {
+define(['jquery','template','util','datepicker','language'],function ($,template,util) {
     var tcId = util.queryString('tcId');
     if(tcId) {
         //编辑讲师
