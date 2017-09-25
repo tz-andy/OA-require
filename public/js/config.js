@@ -10,6 +10,8 @@ require.config({
         template : 'artTemplate/template-web',
         datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker',
         language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        validate : 'validate/jquery-validate',
+        form : 'jquery-form/jquery.form',
         common : '../js/common',
         login : '../js/login',
         teacherList : '../js/teacherList',
@@ -22,6 +24,9 @@ require.config({
         },
         language : {
             deps : ['jquery','datepicker']
+        },
+        validate : {
+            deps : ['jquery']
         }
     }
 });

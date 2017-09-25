@@ -38,28 +38,31 @@
                     <input type="hidden" name="tc_id" value="{{tc_id}}">
                     <label for="" class="col-xs-3 control-label">姓名</label>
                     <div class="col-xs-4">
-                        <input type="text" class="form-control input-sm" name="tc_name" value="{{tc_name}}" placeholder="讲师名称">
+                        <input type="text" data-required data-description="tcName" data-describedby="tcName" class="form-control input-sm" name="tc_name" value="{{tc_name}}" placeholder="讲师名称">
                     </div>
+                    <div class="col-xs-4" id="tcName" style="color: red;"></div>
                 </div>
                 {{if !tc_id}}
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">密码</label>
                     <div class="col-xs-4">
-                        <input type="password" name="tc_pass" class="form-control input-sm">
+                        <input type="password" data-required data-pattern="^[a-zA-Z]\w{5,17}$" data-description="tcPass" data-describedby="tcPass" name="tc_pass" class="form-control input-sm">
                     </div>
+                    <div class="col-xs-4" id="tcPass" style="color: red;"></div>
                 </div>
                 {{/if}}
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">入职时间</label>
                     <div class="col-xs-4">
-                        <input type="text"  name="tc_join_date" value="{{tc_join_date}}"  data-provide="datepicker" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" class="form-control input-sm">
+                        <input type="text" data-required data-description="tcJoinDate" data-describedby="tcJoinDate" name="tc_join_date" value="{{tc_join_date}}"  data-provide="datepicker" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" class="form-control input-sm">
                     </div>
+                    <div class="col-xs-4" id="tcJoinDate" style="color: red;"></div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">类型</label>
                     <div class="col-xs-2">
                         <select name="tc_type" class="form-control input-sm">
-                            <option value="1" {{if tc_type==1}}selected{{/if}}>讲师</option>
+                            <option value="1" {{if tc_type==1}}selected{{/if}} selected>讲师</option>
                             <option value="0" {{if tc_type==0}}selected{{/if}}>管理员</option>
                         </select>
                     </div>
@@ -68,7 +71,7 @@
                     <label for="" class="col-xs-3 control-label">性别</label>
                     <div class="col-xs-4">
                         <label class="radio-inline">
-                            <input type="radio" name="tc_gender" value="0" {{if tc_gender==0}}checked{{/if}}> 男
+                            <input type="radio" name="tc_gender" value="0" {{if tc_gender==0}}checked{{/if}} checked> 男
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="tc_gender" value="1" {{if tc_gender==1}}checked{{/if}}> 女
@@ -77,7 +80,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-xs-7">
-                        <input type="button" id="submitForm" value="提交" class="btn btn-success btn-sm pull-right">
+                        <input type="submit" id="submitForm" value="提交" class="btn btn-success btn-sm pull-right">
                     </div>
                 </div>
             </form>
