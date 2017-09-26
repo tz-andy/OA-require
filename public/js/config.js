@@ -13,6 +13,7 @@ require.config({
         validate : 'validate/jquery-validate',
         form : 'jquery-form/jquery.form',
         uploadify : 'uploadify/jquery.uploadify',
+        region : 'jquery-region/jquery.region',
         common : '../js/common',
         login : '../js/login',
         teacherList : '../js/teacherList',

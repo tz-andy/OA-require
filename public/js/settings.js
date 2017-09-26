@@ -1,4 +1,4 @@
-define(['jquery','template','uploadify'],function ($,template) {
+define(['jquery','template','uploadify','region'],function ($,template) {
     //获取数据，渲染页面
     $.ajax({
        type : 'get',
@@ -8,6 +8,7 @@ define(['jquery','template','uploadify'],function ($,template) {
             // console.log(data);
             var settingsInfoHtml = template('settingsInfoTpl',data.result);
             $('#settingsInfo').html(settingsInfoHtml);
+            //头像上传
             $('#upfile').uploadify({
                 width : 120,
                 height : 120,
@@ -21,6 +22,10 @@ define(['jquery','template','uploadify'],function ($,template) {
                     // console.log(imgObj);
                     $('.preview img').attr('src',imgObj.result.path);
                 }
+            });
+            //省市县三级联动
+            $('#pcd').region({
+               url : '/public/assets/jquery-region/region.json'
             });
         }
     });
